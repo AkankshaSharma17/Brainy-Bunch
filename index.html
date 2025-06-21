@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <!-- Welcome Page -->
+    <div class="welcome-container">
+        <h1 class="welcome-heading">Welcome to the Brainy Bunch Quiz</h1>
+        <button class="start-button" onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Container (hidden initially) -->
+    <div id="quiz-container" style="display: none;">
+        <div id="quiz">
+            <h1>QUIZ</h1>
+            <h2>Brainy Bunch</h2>
+            <div id="question-container"></div>
+            <div id="options-container"></div>
+            <button id="next-button">Next</button>
+        </div>
+        <div id="result-container" style="display: none;">
+            <h2>Your Results</h2>
+            <p id="score"></p>
+        </div>
+    </div>
+
+    <script src="quiz.js"></script>
+    <script>
+        function startQuiz() {
+            document.querySelector('.welcome-container').style.display = 'none';
+            document.getElementById('quiz-container').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
